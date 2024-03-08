@@ -22,10 +22,14 @@ dependencies:
   intl:
   logger:
   url_launcher: 
+  flutter_native_splash:
+  smooth_page_indicator: ^1.1.0
 
   #  State Management
   get: 
   get_storage: 
+
+  
 
 dev_dependencies:
   flutter_test:
@@ -42,7 +46,7 @@ flutter:
   assets:
     - assets/logos/
     - assets/icons/
-    - assets/images/
+    - assets/images/onboarding_images/
 
 
   # example:
