@@ -24,6 +24,7 @@ dependencies:
   url_launcher: 
   flutter_native_splash:
   smooth_page_indicator: ^1.1.0
+  carousel_slider: 
 
   #  State Management
   get: 
@@ -45,8 +46,10 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/logos/
-    - assets/icons/
+    - assets/icons/categories/
     - assets/images/onboarding_images/
+    - assets/images/animations/
+    - assets/images/banners/
 
 
   # example:
