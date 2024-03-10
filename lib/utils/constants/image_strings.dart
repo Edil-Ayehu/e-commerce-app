@@ -34,13 +34,13 @@ class TImages {
   static const String user = "assets/images/user/user.JPG";
 
   // Products
-  static const String productImage1 = "assets/images/products/laptop.jpg";
-  static const String productImage2 = "assets/images/products/laptop2.jpg";
-  static const String productImage3 = "assets/images/products/phone3.jpg";
-  static const String productImage4 = "assets/images/products/shoe2.jpg";
-   static const String productImage5 = "assets/images/products/shoe3.jpg";
-  static const String productImage6 = "assets/images/products/shoes1.jpg";
-  static const String productImage7 = "assets/images/products/shoes2.jpg";
+  static const String productImage1 = "assets/images/products/pro1.png";
+  static const String productImage2 = "assets/images/products/pro2.png";
+  static const String productImage3 = "assets/images/products/pro3.png";
+  static const String productImage4 = "assets/images/products/pro4.png";
+   static const String productImage5 = "assets/images/products/pro5.png";
+  static const String productImage6 = "assets/images/products/pro6.png";
+  static const String productImage7 = "assets/images/products/pro1.png";
 
     // Brands
   static const String productBrand1 = "assets/images/products/jordan.png";
