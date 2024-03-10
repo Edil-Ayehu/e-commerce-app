@@ -50,6 +50,7 @@ flutter:
     - assets/images/onboarding_images/
     - assets/images/animations/
     - assets/images/banners/
+    - assets/images/products/
 
 
   # example:

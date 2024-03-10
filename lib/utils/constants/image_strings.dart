@@ -20,14 +20,27 @@ class TImages {
   static const String deliveredEmailIllustration = "assets/images/animations/intro1.png";
   static const String verifyIllustration = "assets/images/animations/intro1.png";
 
-      // Category Icons
+// Category Icons
   static const String clothIcon = "assets/icons/categories/clothes.png";
-  static const String shoeIcon = "assets/icons/categories/shoes.png";
+  static const String shoeIcon = "assets/icons/categories/clothes.png";
 
-        // Banners
+// Banners
   static const String promoBanner1 = "assets/images/banners/banner5.png";
   static const String promoBanner2 = "assets/images/banners/banner4.jpg";
   static const String promoBanner3 = "assets/images/banners/banner3.jpg";
   static const String promoBanner4 = "assets/images/banners/banner6.png";
+
+  // Products
+  static const String productImage1 = "assets/images/products/laptop.jpg";
+  static const String productImage2 = "assets/images/products/laptop2.jpg";
+  static const String productImage3 = "assets/images/products/phone3.jpg";
+  static const String productImage4 = "assets/images/products/shoe2.jpg";
+   static const String productImage5 = "assets/images/products/shoe3.jpg";
+  static const String productImage6 = "assets/images/products/shoes1.jpg";
+  static const String productImage7 = "assets/images/products/shoes2.jpg";
+
+    // Brands
+  static const String productBrand1 = "assets/images/products/jordan.png";
+
 
 }

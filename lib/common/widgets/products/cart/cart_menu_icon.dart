@@ -5,7 +5,9 @@ import '../../../../utils/constants/colors.dart';
 
 class TCartCounterIcon extends StatelessWidget {
   const TCartCounterIcon({
-    super.key, required this.iconColor, required this.onPressed,
+    super.key,
+    this.iconColor = TColors.white,
+    required this.onPressed,
   });
 
   final Color iconColor;
