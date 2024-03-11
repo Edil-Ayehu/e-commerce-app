@@ -42,6 +42,11 @@ class TImages {
   static const String productImage6 = "assets/images/products/pro6.png";
   static const String productImage7 = "assets/images/products/pro1.png";
 
+  // Payment methods
+  static const String telebirr = "assets/icons/payment_methods/telebirr.png";
+  static const String chapa = "assets/icons/payment_methods/chapa.png";
+  static const String checked = "assets/icons/payment_methods/checked.png";
+
     // Brands
   static const String productBrand1 = "assets/images/products/jordan.png";
 
