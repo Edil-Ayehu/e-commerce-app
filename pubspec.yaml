@@ -33,6 +33,7 @@ dependencies:
   # Product Specific
   readmore: 
   carousel_slider: 
+  flutter_rating_bar: 
 
   
 
