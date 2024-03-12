@@ -3,6 +3,10 @@ class TImages {
   static const String darkAppLogo = "assets/logos/logo.png";
   static const String lightAppLogo = "assets/logos/logo.png";
 
+   static const String logo1 = "assets/logos/logo1.png";
+  static const String logo2 = "assets/logos/logo2.png";
+  static const String logo3 = "assets/logos/logo3.png";
+
   // Social logos
   static const String google = "assets/logos/google.png";
   static const String facebook = "assets/logos/facebook.png";

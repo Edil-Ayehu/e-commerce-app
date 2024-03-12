@@ -17,16 +17,20 @@ class TLoginHeader extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Image(
-          height: 150,
-          image: AssetImage(
-              dark ? TImages.lightAppLogo : TImages.darkAppLogo),
+        Center(
+          child: Image(
+            height: 150,
+            image: AssetImage(
+                dark ? TImages.logo2 : TImages.logo2),
+          ),
         ),
+        const SizedBox(height: TSizes.spaceBtwItems),
         Text(TTexts.loginTitle,
             style: Theme.of(context).textTheme.headlineMedium),
         const SizedBox(height: TSizes.sm),
         Text(TTexts.loginSubTitle,
             style: Theme.of(context).textTheme.bodyMedium),
+            const SizedBox(height: TSizes.spaceBtwItems),
       ],
     );
   }
