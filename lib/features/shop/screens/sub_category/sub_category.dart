@@ -28,7 +28,26 @@ class SubCategoriesScreen extends StatelessWidget {
               Column(
                 children: [
                   // Heading
-                  TSectionHeading(title: 'Sports shirts', onPressed:(){}),
+                  TSectionHeading(title: 'Sport Shoes', onPressed:(){}),
+                  const SizedBox(height: TSizes.spaceBtwItems/2),
+
+                  
+                  SizedBox(
+                    height: 120,
+                    child: ListView.separated(
+                       itemCount: 6,
+                       scrollDirection: Axis.horizontal,
+                       separatorBuilder: (context,index)=> const SizedBox(width: TSizes.spaceBtwItems,),
+                        itemBuilder: (context,index)=> const TProductCardHorizontal(),
+                        ),
+                  ),
+                ],
+              ),
+
+              Column(
+                children: [
+                  // Heading
+                  TSectionHeading(title: 'Sports Equipments', onPressed:(){}),
                   const SizedBox(height: TSizes.spaceBtwItems/2),
 
                   
