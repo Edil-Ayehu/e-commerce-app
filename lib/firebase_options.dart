@@ -63,6 +63,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '440479016164',
     projectId: 'flutter-ecommerce-app-980e0',
     storageBucket: 'flutter-ecommerce-app-980e0.appspot.com',
+    androidClientId: '440479016164-lkq5986k2b2ma0tbri6p33jf25jt26lv.apps.googleusercontent.com',
+    iosClientId: '440479016164-8h0mkku68a8lmj46jli1mmpp3agh42q1.apps.googleusercontent.com',
     iosBundleId: 'com.example.eCommerceApp',
   );
 }

@@ -1,4 +1,3 @@
-import 'package:e_commerce_app/features/authentication/screens/onboarding/onboarding.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'utils/theme/theme.dart';
@@ -13,7 +12,13 @@ class App extends StatelessWidget {
       themeMode: ThemeMode.system,
       theme: TAppTheme.lightTheme,
       darkTheme: TAppTheme.darkTheme,
-      home: const OnBoardingScreen(),
+      // show loader or circular progress indicator meanwhile authentication repository is deciding to show relevant screen
+      home: const Scaffold(
+        backgroundColor: Colors.lightBlueAccent,
+        body: Center(
+          child: CircularProgressIndicator(color: Colors.white),
+        ),
+      ),
     );
   }
 }
