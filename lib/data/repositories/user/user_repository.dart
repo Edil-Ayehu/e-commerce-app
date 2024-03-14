@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:e_commerce_app/utils/exceptions/platform_exceptions.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
@@ -14,13 +15,13 @@ class UserRepository extends GetxController {
     try {
       await _db.collection("Users").doc(user.id).set(user.toJson());
     } on FirebaseException catch (e) {
-      throw '=============================================================================Something went wrong. please try again';
+      throw 'Something went wrong. please try again';
     } on FormatException catch (e) {
-      throw '=============================================================================Something went wrong. please try again';
+      throw 'Something went wrong. please try again';
     } on PlatformException catch (e) {
-      throw '=============================================================================Something went wrong. please try again';
-    } catch(e){
-      throw '=============================================================================Something went wrong. please try again';
+      throw TPlatformException(e.code).message;
+    } catch (e) {
+      throw 'Something went wrong. please try again';
     }
   }
 
