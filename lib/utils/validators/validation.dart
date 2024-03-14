@@ -1,4 +1,13 @@
 class TValidator {
+  // Empty Text Validation
+  static String? validateEmptyText(String? fieldName, String? value) {
+    if (value == null || value.isEmpty) {
+      return '$fieldName is required!';
+    }
+
+    return null;
+  }
+
   static String? validateEmail(String? value) {
     if (value == null || value.isEmpty) {
       return 'Email is required';
@@ -25,12 +34,12 @@ class TValidator {
     }
 
     // check for uppercase letters
-    if (!value.contains(RegExp(r'[A-Z}'))) {
+    if (!value.contains(RegExp(r'[A-Z]'))) {
       return 'Password must contain at least one uppercase letter';
     }
 
     // check for numbers
-    if (!value.contains(RegExp(r'[0-9}'))) {
+    if (!value.contains(RegExp(r'[0-9]'))) {
       return 'Password must contain at least one number';
     }
 

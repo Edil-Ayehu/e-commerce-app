@@ -52,7 +52,11 @@ class TImages {
   static const String checked = "assets/icons/payment_methods/checked.png";
 
     // Brands
+  
   static const String productBrand1 = "assets/images/products/jordan.png";
 
 
+  // animation
+  static const String loadAnimation = "assets/images/animations/load.json";
+  static const String successAnimation = "assets/images/animations/successAnimation.json";
 }
