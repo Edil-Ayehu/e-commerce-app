@@ -28,6 +28,7 @@ dependencies:
   intl:
   logger:
   lottie: 
+  shimmer: 
   connectivity_plus:
   url_launcher: 
   flutter_native_splash:
