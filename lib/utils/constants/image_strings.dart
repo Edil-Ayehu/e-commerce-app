@@ -27,6 +27,10 @@ class TImages {
 // Category Icons
   static const String clothIcon = "assets/icons/categories/clothes.png";
   static const String shoeIcon = "assets/icons/categories/clothes.png";
+  static const String animalIcon = "assets/icons/categories/animal.png";
+  static const String cosmoticsIcon = "assets/icons/categories/cosmotics.png";
+  static const String furnitureIcon = "assets/icons/categories/furniture.png";
+  static const String sportIcon = "assets/icons/categories/sport.png";
 
 // Banners
   static const String promoBanner1 = "assets/images/banners/banner5.png";
@@ -35,7 +39,7 @@ class TImages {
   static const String promoBanner4 = "assets/images/banners/banner6.png";
 
   // Banners
-  static const String user = "assets/images/user/user.JPG";
+  static const String user = "assets/images/user/avatar.jpg";
 
   // Products
   static const String productImage1 = "assets/images/products/pro1.png";

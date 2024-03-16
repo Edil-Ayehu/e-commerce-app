@@ -22,6 +22,7 @@ dependencies:
   firebase_auth:
   cloud_firestore:  
   google_sign_in: 
+  firebase_storage: 
 
   # Utility Packages
   http: 
@@ -29,6 +30,8 @@ dependencies:
   logger:
   lottie: 
   shimmer: 
+  image_picker:
+  cached_network_image:  
   connectivity_plus:
   url_launcher: 
   flutter_native_splash:

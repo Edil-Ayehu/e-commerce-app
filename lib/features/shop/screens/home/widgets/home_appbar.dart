@@ -1,6 +1,6 @@
 import 'package:e_commerce_app/features/personalization/controllers/user_controller.dart';
 import 'package:e_commerce_app/features/shop/screens/cart/cart.dart';
-import 'package:e_commerce_app/shimmer.dart';
+import 'package:e_commerce_app/common/widgets/shimmers/shimmer.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
