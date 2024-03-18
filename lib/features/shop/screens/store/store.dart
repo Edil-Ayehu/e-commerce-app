@@ -3,9 +3,12 @@ import 'package:e_commerce_app/common/widgets/appbar/tabbar.dart';
 import 'package:e_commerce_app/common/widgets/custom_shapes/containers/search_container.dart';
 import 'package:e_commerce_app/common/widgets/layouts/grid_layout.dart';
 import 'package:e_commerce_app/common/widgets/products/cart/cart_menu_icon.dart';
+import 'package:e_commerce_app/common/widgets/shimmers/brands_shimmer.dart';
 import 'package:e_commerce_app/common/widgets/texts/section_heading.dart';
+import 'package:e_commerce_app/features/shop/controllers/brand_controller.dart';
 import 'package:e_commerce_app/features/shop/controllers/category_controller.dart';
 import 'package:e_commerce_app/features/shop/screens/brand/all_brands.dart';
+import 'package:e_commerce_app/features/shop/screens/brand/brand_products.dart';
 import 'package:e_commerce_app/features/shop/screens/store/widgets/category_tab.dart';
 import 'package:e_commerce_app/utils/constants/colors.dart';
 import 'package:e_commerce_app/utils/constants/sizes.dart';
@@ -22,6 +25,7 @@ class StoreScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final dark = THelperFunctions.isDarkMode(context);
     final categories = CategoryController.instance.featuredCategories;
+    final brandController = Get.put(BrandController());
 
     return DefaultTabController(
       length: categories.length,
@@ -71,18 +75,45 @@ class StoreScreen extends StatelessWidget {
                               Get.to(() => const AllBrandsScreen())),
                       const SizedBox(height: TSizes.spaceBtwItems / 1.5),
 
-                      TGridLayout(
-                          itemCount: 4,
+                      // Brands Grid
+                      Obx(() {
+                        if (brandController.isLoading.value) {
+                          return const TBrandsShimmer();
+                        }
+                        if (brandController.featuredBrands.isEmpty) {
+                          return Center(
+                            child: Text(
+                              "No Data Found!",
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .bodyMedium!
+                                  .apply(color: Colors.white),
+                            ),
+                          );
+                        }
+                        return TGridLayout(
+                          itemCount: brandController.featuredBrands.length,
                           mainAxisExtent: 80,
                           itemBuilder: (_, index) {
-                            return const TBrandCard(showBorder: true);
-                          }),
+                            final brand = brandController.featuredBrands[index];
+                            return TBrandCard(
+                              showBorder: true,
+                              brand: brand,
+                              onTap: () =>
+                                  Get.to(() => BrandProducts(brand: brand)),
+                            );
+                          },
+                        );
+                      })
                     ],
                   ),
                 ),
 
                 // Tabs
-                bottom: TTabBar(tabs: categories.map((category) => Tab(child: Text(category.name))).toList(),
+                bottom: TTabBar(
+                  tabs: categories
+                      .map((category) => Tab(child: Text(category.name)))
+                      .toList(),
                 ),
               ),
             ];
@@ -90,7 +121,9 @@ class StoreScreen extends StatelessWidget {
 
           // Body
           body: TabBarView(
-            children: categories.map((category) => TCategoryTab(category: category)).toList()
+            children: categories
+                .map((category) => TCategoryTab(category: category))
+                .toList(),
           ),
         ),
       ),

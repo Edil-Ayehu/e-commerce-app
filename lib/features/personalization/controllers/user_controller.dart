@@ -3,7 +3,7 @@ import 'package:e_commerce_app/data/repositories/user/user_repository.dart';
 import 'package:e_commerce_app/features/authentication/screens/login/login.dart';
 import 'package:e_commerce_app/features/personalization/models/user_model.dart';
 import 'package:e_commerce_app/features/personalization/screens/profile/widgets/re_authenticate_user_login_form.dart';
-import 'package:e_commerce_app/network_manager.dart';
+import 'package:e_commerce_app/utils/helpers/network_manager.dart';
 import 'package:e_commerce_app/utils/constants/image_strings.dart';
 import 'package:e_commerce_app/utils/constants/sizes.dart';
 import 'package:e_commerce_app/utils/popups/full_screen_loader.dart';

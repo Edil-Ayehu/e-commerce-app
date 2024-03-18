@@ -6,7 +6,6 @@ import 'package:e_commerce_app/features/shop/models/product_model.dart';
 import 'package:e_commerce_app/features/shop/screens/product_details/product_detail.dart';
 import 'package:e_commerce_app/utils/constants/colors.dart';
 import 'package:e_commerce_app/utils/constants/enums.dart';
-import 'package:e_commerce_app/utils/constants/image_strings.dart';
 import 'package:e_commerce_app/utils/constants/sizes.dart';
 import 'package:e_commerce_app/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
@@ -14,9 +13,9 @@ import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 import '../../custom_shapes/containers/rounded_container.dart';
-import '../../icons/t_circular_icon.dart';
 import '../../images/t_rounded_image.dart';
 import '../../texts/product_price_text.dart';
+import '../favourite_icon/favourite_icon.dart';
 
 class TProductCardVertical extends StatelessWidget {
   const TProductCardVertical({super.key, required this.product});
@@ -55,12 +54,13 @@ class TProductCardVertical extends StatelessWidget {
                   Center(
                     child: TRoundedImage(
                       imageUrl: product.thumbnail,
-                      applyImageRadius: true,
+                      applyImageRadius: true, 
                       isNetworkImage: true,
                     ),
                   ),
 
                   // Sale TAG
+                  if(salePercentage !=null)
                   Positioned(
                     top: 10,
                     left: 5,
@@ -80,11 +80,11 @@ class TProductCardVertical extends StatelessWidget {
                   ),
 
                   /// Favourite Icon Button
-                  const Positioned(
+                  Positioned(
                     top: 0,
                     right: 0,
                     child:
-                        TCircularIcon(icon: Iconsax.heart5, color: Colors.red),
+                        TFavouriteIcon(productId: product.id),
                   ),
                 ],
               ),

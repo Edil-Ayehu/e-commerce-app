@@ -75,7 +75,10 @@ class HomeScreen extends StatelessWidget {
                   // Heading
                   TSectionHeading(
                     title: 'Popular Products',
-                    onPressed: () => Get.to(() => const AllProducts()),
+                    onPressed: () => Get.to(() => AllProducts(
+                      title: 'Popular Products',
+                      futureMethod: controller.fetchAllFeaturedProducts(),
+                    )),
                   ),
 
                   // Popular Products
@@ -87,7 +90,7 @@ class HomeScreen extends StatelessWidget {
                     if (controller.featuredProducts.isEmpty) {
                       return Center(
                         child: Text(
-                          'No Data Found!   ljlakjdflajd',
+                          'No Data Found!',
                           style: Theme.of(context).textTheme.bodyMedium,
                         ),
                       );

@@ -1,4 +1,4 @@
-import 'package:e_commerce_app/network_manager.dart';
+import 'package:e_commerce_app/utils/helpers/network_manager.dart';
 import 'package:get/get.dart';
 
 class GeneralBindings extends Bindings {

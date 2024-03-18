@@ -9,8 +9,8 @@ import '../../../../../common/widgets/appbar/appbar.dart';
 import '../../../../../common/widgets/custom_shapes/curved_edges/curved_edges_widget.dart';
 import '../../../../../common/widgets/icons/t_circular_icon.dart';
 import '../../../../../common/widgets/images/t_rounded_image.dart';
+import '../../../../../common/widgets/products/favourite_icon/favourite_icon.dart';
 import '../../../../../utils/constants/colors.dart';
-import '../../../../../utils/constants/image_strings.dart';
 import '../../../../../utils/constants/sizes.dart';
 import '../../../../../utils/helpers/helper_functions.dart';
 
@@ -90,11 +90,9 @@ class TProductImageSlider extends StatelessWidget {
             ),
 
             // Appbar Icons
-            const TAppBar(
+            TAppBar(
               showBackArrow: true,
-              actions: [
-                TCircularIcon(icon: Iconsax.heart5, color: Colors.red),
-              ],
+              actions: [ TFavouriteIcon(productId: product.id)],
             ),
           ],
         ),

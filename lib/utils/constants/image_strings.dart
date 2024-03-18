@@ -26,7 +26,7 @@ class TImages {
 
 // Category Icons
   static const String clothIcon = "assets/icons/categories/clothes.png";
-  static const String shoeIcon = "assets/icons/categories/clothes.png";
+  static const String shoeIcon = "assets/icons/categories/shoes.png";
   static const String animalIcon = "assets/icons/categories/animal.png";
   static const String cosmoticsIcon = "assets/icons/categories/cosmotics.png";
   static const String furnitureIcon = "assets/icons/categories/furniture.png";
@@ -63,4 +63,6 @@ class TImages {
   // animation
   static const String loadAnimation = "assets/images/animations/load.json";
   static const String successAnimation = "assets/images/animations/successAnimation.json";
+  static const String emptyWishlist = "assets/images/animations/emptyWishlist.json";
+  static const String emptyFav = "assets/images/animations/empty.json";
 }
