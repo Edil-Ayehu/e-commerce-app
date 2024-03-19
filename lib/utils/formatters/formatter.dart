@@ -10,16 +10,26 @@ class TFormatter {
     return NumberFormat.currency(locale: 'en_US', symbol: "\$").format(amount);
   }
 
+  // static String formatPhoneNumber(String phoneNumber) {
+  //   // Assuming a 10 digit US Phone number format (123) 456-7890
+  //   if (phoneNumber.length == 10) {
+  //     return '(${phoneNumber.substring(0, 3)}) ${phoneNumber.substring(3, 6)} ${phoneNumber.substring(6)}';
+  //   } else if (phoneNumber.length == 11) {
+  //     return '(${phoneNumber.substring(0, 4)}) ${phoneNumber.substring(4, 7)} ${phoneNumber.substring(7)}';
+  //   }
+  //   // add more custom phone number formatting logic for different formats if needed.
+  //   return phoneNumber;
+  // }
+
   static String formatPhoneNumber(String phoneNumber) {
-    // Assuming a 10 digit US Phone number format (123) 456-7890
-    if (phoneNumber.length == 10) {
-      return '(${phoneNumber.substring(0, 3)}) ${phoneNumber.substring(3, 6)} ${phoneNumber.substring(6)}';
-    } else if (phoneNumber.length == 11) {
-      return '(${phoneNumber.substring(0, 4)}) ${phoneNumber.substring(4, 7)} ${phoneNumber.substring(7)}';
-    }
-    // add more custom phone number formatting logic for different formats if needed.
-    return phoneNumber;
+  // Assuming a 10 digit number format (0910111213)
+  if (phoneNumber.length == 10) {
+    // Prepend the country code and remove any leading zeros
+    return '+251${phoneNumber.replaceFirst(RegExp('^0+'), '')}';
   }
+  // add more custom phone number formatting logic for different formats if needed.
+  return phoneNumber;
+}
 
   // Nof fully tested
   // static String internationalFormatPhoneNumber(String phoneNumber) {
