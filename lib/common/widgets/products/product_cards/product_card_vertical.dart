@@ -25,8 +25,7 @@ class TProductCardVertical extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final controller = ProductController.instance;
-    final salePercentage =
-        controller.calculateSalePercentage(product.price, product.salePrice);
+    final salePercentage =controller.calculateSalePercentage(product.price, product.salePrice);
     final dark = THelperFunctions.isDarkMode(context);
 
     return GestureDetector(

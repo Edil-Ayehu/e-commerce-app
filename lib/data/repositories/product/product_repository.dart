@@ -102,7 +102,7 @@ class ProductRepository extends GetxController {
   }
 
 
-    Future<List<ProductModel>> getProductsForCategory({required String categoryId,int limit = 4})async{
+  Future<List<ProductModel>> getProductsForCategory({required String categoryId,int limit = 4})async{
   try{
     QuerySnapshot productCategoryQuery = limit == -1
     ? await _db.collection('ProductCategory').where('categoryId', isEqualTo: categoryId).get()
@@ -110,19 +110,23 @@ class ProductRepository extends GetxController {
 
     // Extract productIds from the documents
     List<String> productIds = productCategoryQuery.docs.map((doc) => doc['productId'] as String).toList();
+    if (productIds.isEmpty) {
+        return []; // Return an empty list if productIds is empty
+    }
 
     final productsQuery = await _db.collection('Products').where(FieldPath.documentId,whereIn: productIds).get();
 
     List<ProductModel> products = productsQuery.docs.map((doc) => ProductModel.fromSnapshot(doc)).toList();
-
-    return products;
+    
+      return products;
+    
 
   }on FirebaseException catch (e) {
       throw 'Something went wrong. Please try again : $e';
     } on PlatformException catch (e) {
       throw TPlatformException(e.code).message;
     } catch (e) {
-      throw 'Something went wrong. Please try again $e';
+      throw '=============Something went wrong. Please try again $e';
     }
   }
 

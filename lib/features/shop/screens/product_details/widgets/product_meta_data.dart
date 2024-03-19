@@ -6,7 +6,6 @@ import 'package:e_commerce_app/common/widgets/texts/t_brand_title_text_with_veri
 import 'package:e_commerce_app/features/shop/controllers/product/product_controller.dart';
 import 'package:e_commerce_app/features/shop/models/product_model.dart';
 import 'package:e_commerce_app/utils/constants/enums.dart';
-import 'package:e_commerce_app/utils/constants/image_strings.dart';
 import 'package:e_commerce_app/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 
