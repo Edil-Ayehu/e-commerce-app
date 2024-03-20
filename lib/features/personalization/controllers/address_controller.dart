@@ -39,15 +39,15 @@ class AddressController extends GetxController {
 
   Future selectAddress(AddressModel newSelectedAddress) async {
     try {
-      // Get.defaultDialog(
-      //   title: '',
-      //   onWillPop: () async {
-      //     return false;
-      //   },
-      //   barrierDismissible: false,
-      //   backgroundColor: Colors.transparent,
-      //   content: const TCircularLoader(),
-      // );
+      Get.defaultDialog(
+        title: '',
+        onWillPop: () async {
+          return false;
+        },
+        barrierDismissible: false,
+        backgroundColor: Colors.transparent,
+        content: const CircularProgressIndicator(color: Colors.lightBlueAccent),
+      );
       // Clear the 'Selected' field
       if (selectedAddress.value.id.isNotEmpty) {
         await addressRepository.updateSelectedField(
@@ -62,7 +62,7 @@ class AddressController extends GetxController {
       await addressRepository.updateSelectedField(
           selectedAddress.value.id, true);
 
-      //Get.back();
+      Get.back();
     } catch (e) {
       TLoaders.errorSnackBar(
           title: 'Error in Selection', message: e.toString());
